@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 /** --------------
-	borders 
+	borders
 ------------------ */
 @for $i from 1 through 20 {
 	.border-#{$i}{ border: #{$i}px solid; }
@@ -100,6 +100,22 @@
 ------------------ */
 @for $i from 1 through 50{
 	.mb-#{$i}{ margin-bottom: #{$i}px }
+}
+
+/** Containers */
+@mixin container($uid: container, $small: 640px, $medium: 768px, $large: 1024px, $xlarge: 1280px) {
+  $container: (
+    '': 100%,
+    '-sm': $small,
+    '-md': $medium,
+    '-lg': $large,
+    '-xl': $xlarge,
+  );
+  @each $prop, $value in $container {
+    .#{$uid}#{$prop} {
+      max-width: $value;
+    }
+  }
 }
 
 /** round image */

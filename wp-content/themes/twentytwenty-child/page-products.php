@@ -1,73 +1,40 @@
 <?php
     /* Template Name: Products Page Template */
-    $args = array (
-        'post_type'      => 'product'
-    );
-    $products_query = new WP_Query( $args );
+
     get_header();
 ?>
-    <main class="main main-archive-article">
+    <main class="main main-archive-products">
 
-        <?php get_template_part( 'inc/banner' ); ?>
+        <?php get_template_part( 'template-parts/hero' ); ?>
 
-        <section class="section article-archive-main-section">
+        <section class="section products-grid-section">
+            <div class="products-grid">
+              <?php
+                  $args = array (
+                      'post_type'      => 'product'
+                  );
+                  $products_query = new WP_Query( $args );
 
-            <?php
-                while( $products_query->have_posts() ) : $products_query->the_post();
-                    $author         = get_field( 'author' );
-                    $link           = get_field( 'link' );
-                    $pdf_file       = get_field( 'pdf_file' );
-					$link 			= $pdf_file ? $pdf_file : $link;
-                    $read_more_text = get_field( 'read_more_text', 'option' );
-            ?>
+                  while( $products_query->have_posts() ) : $products_query->the_post();
 
-                <div class="article-post">
-                    <div class="row">
+                  $product_on_sale = get_field('product_on_sale');
+              ?>
 
-                        <div class="large-3 columns">
-                            <?php if ( get_the_post_thumbnail_url() && $link ): ?>
-                                <div class="article-thumb-wrapper match-height">
-                                    <a target="_blank" href="<?php echo $link; ?>">
-                                        <?php the_post_thumbnail() ?>
-                                    </a>
-                                </div>
-                            <?php elseif ( get_the_post_thumbnail_url() ) : ?>
-                                <div class="article-thumb-wrapper match-height">
-                                    <?php the_post_thumbnail() ?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-
-                        <div class="large-9 columns">
-                            <div class="article-content-col-wrapper match-height">
-                                <div class="article-title-wrapper">
-                                    <h4><?php the_title(); ?></h4>
-                                </div>
-                                <div class="article-content-wrapper clear">
-                                    <div class="article-text-wrapper ">
-                                        <?php the_content(); ?>
-                                        <?php if ( $author ): ?>
-                                            <div class="author-wrapper">
-                                                <p><?php echo $author; ?></p>
-                                            </div>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                                <?php if ( $link && $read_more_text ): ?>
-                                    <div class="readmore-flex-wrap">
-                                        <div class="readmore-wrapper">
-                                            <a target="_blank" href="<?php echo $link; ?>"><?php echo $read_more_text; ?></a>
-                                        </div>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-
+                <div class="product-block border-1 padding-3 center">
+                  <a href="<?php the_permalink(); ?>" class="product-link" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+                    <div class="product-title">
+                      <h3><?php the_title(); ?></h3>
                     </div>
+                    <?php if ( $product_on_sale ): ?>
+                      <div class="on-sale">
+                        ON SALE
+                      </div>
+                    <?php endif; ?>
+                  </a>
                 </div>
 
-            <?php endwhile; $products_query->wp_reset_query(); ?>
-
+              <?php endwhile; $products_query->wp_reset_query(); ?>
+            </div>
         </section>
 
     </main>

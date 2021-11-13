@@ -16,13 +16,14 @@
 		1.2 Fonts
 		1.3 Typography
 		1.4 Helpers
+    1.5 Containers
 	2. Sections
-		2.1 Header
+		2.1 Hero
 		2.2 Footer
 	3. Components
 		3.1 Buttons
 	4. Pages
-		4.1 Home page
+		4.1 Products page
 	5. Themes
 		5.1 Default Theme
 
@@ -84,12 +85,16 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: 700; }
 
+h3 {
+  font-size: 1.8em;
+  color: #002c58; }
+
 dd {
   margin-left: 25px; }
 
 /* --------------------- 1.4 Helpers --------------------- */
 /** --------------
-	borders 
+	borders
 ------------------ */
 .border-1 {
   border: 1px solid; }
@@ -1933,6 +1938,7 @@ dd {
 .mb-50 {
   margin-bottom: 50px; }
 
+/** Containers */
 /** round image */
 img.img-round {
   border-radius: 100%; }
@@ -1974,57 +1980,133 @@ ul.linear-list li {
 .text-bold {
   font-weight: bold; }
 
+/* --------------------- 1.5 Containers --------------------- */
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem; }
+  .container:not(.is-fluid) {
+    margin: 0 auto; }
+    @media only screen and (min-width: 600px) {
+      .container:not(.is-fluid) {
+        width: 100%;
+        max-width: 570px; } }
+    @media only screen and (min-width: 900px) {
+      .container:not(.is-fluid) {
+        width: 100%;
+        max-width: 860px; } }
+    @media only screen and (min-width: 1200px) {
+      .container:not(.is-fluid) {
+        width: 100%;
+        max-width: 1150px; } }
+    @media only screen and (min-width: 1800px) {
+      .container:not(.is-fluid) {
+        width: 100%;
+        max-width: 1400px; } }
+
+.container-sm {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%; }
+  @media only screen and (min-width: 600px) {
+    .container-sm {
+      max-width: 570px; } }
+  @media only screen and (min-width: 900px) {
+    .container-sm {
+      max-width: 860px; } }
+  @media only screen and (min-width: 1200px) {
+    .container-sm {
+      max-width: 1150px; } }
+  @media only screen and (min-width: 1800px) {
+    .container-sm {
+      max-width: 1400px; } }
+
+.container-md {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%; }
+  @media only screen and (min-width: 900px) {
+    .container-md {
+      max-width: 860px; } }
+  @media only screen and (min-width: 1200px) {
+    .container-md {
+      max-width: 1150px; } }
+  @media only screen and (min-width: 1800px) {
+    .container-md {
+      max-width: 1400px; } }
+
+.container-lg {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%; }
+  @media only screen and (min-width: 1200px) {
+    .container-lg {
+      max-width: 1150px; } }
+  @media only screen and (min-width: 1800px) {
+    .container-lg {
+      max-width: 1400px; } }
+
+.container-xl {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%; }
+  @media only screen and (min-width: 1800px) {
+    .container-xl {
+      max-width: 1400px; } }
+
 /**
  * ---------------------------------------------------
  * 	2.  Sections
  * ---------------------------------------------------
  */
-/* --------------------- 2.1 Header --------------------- */
-.hero-area {
+/* --------------------- 2.1 Hero --------------------- */
+.hero-section {
   background: linear-gradient(dodgerblue, #0070DF);
   text-align: center;
   padding: 15px;
-  min-height: 100vh;
-  display: flex;
-  margin-bottom: 8em; }
+  min-height: 20vh;
+  display: flex; }
   @media all and (max-width: 650px) {
-    .hero-area {
+    .hero-section {
       transition: .5s;
       min-height: 40vh; } }
-  .hero-area h1, .hero-area p {
+  .hero-section h1, .hero-section p {
     color: #FFFFFF; }
-  .hero-area .hero-content {
+  .hero-section .hero-content {
     margin: auto;
     text-transform: uppercase; }
-    .hero-area .hero-content span {
+    .hero-section .hero-content span {
       background-color: #fff;
       color: dodgerblue;
       padding: 0 2px;
       border-radius: 3px; }
-    .hero-area .hero-content h1 {
+    .hero-section .hero-content h1 {
       font-size: 6em;
       text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
       @media all and (max-width: 1109px) {
-        .hero-area .hero-content h1 {
+        .hero-section .hero-content h1 {
           transition: .5s;
           font-size: 5em; } }
       @media all and (max-width: 932px) {
-        .hero-area .hero-content h1 {
+        .hero-section .hero-content h1 {
           transition: .5s;
           font-size: 4em; } }
       @media all and (max-width: 754px) {
-        .hero-area .hero-content h1 {
+        .hero-section .hero-content h1 {
           transition: .5s;
           font-size: 3.5em; } }
       @media all and (max-width: 600px) {
-        .hero-area .hero-content h1 {
+        .hero-section .hero-content h1 {
           transition: .5s;
           font-size: 2.5em; } }
-    .hero-area .hero-content p {
+    .hero-section .hero-content p {
       font-size: 2em;
       line-height: 2em; }
       @media all and (max-width: 600px) {
-        .hero-area .hero-content p {
+        .hero-section .hero-content p {
           transition: .5s;
           font-size: 1.3em; } }
 
@@ -2075,6 +2157,64 @@ ul.linear-list li {
  * ---------------------------------------------------
  */
 /* --------------------- 4.1 Home page --------------------- */
+main.main-archive-products .products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+  @media all and (max-width: 1280px) {
+    main.main-archive-products .products-grid {
+      transition: .5s;
+      grid-template-columns: 1fr 1fr; } }
+  @media all and (max-width: 1080px) {
+    main.main-archive-products .products-grid {
+      transition: .5s;
+      grid-template-columns: 1fr; } }
+
+main.main-archive-products .product-block {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  padding: 2em; }
+
+main.main-archive-products .product-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.8);
+  filter: grayscale(0.6);
+  overflow: hidden;
+  transition: all 0.2s ease; }
+  main.main-archive-products .product-link:hover, main.main-archive-products .product-link:active, main.main-archive-products .product-link:focus {
+    filter: grayscale(0);
+    transform: scale(1.15); }
+
+main.main-archive-products .product-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 60%;
+  padding: 20px;
+  min-width: 150px;
+  background: #ffffff59;
+  box-shadow: 0 0 10px 15px #ffffff59; }
+
+main.main-archive-products .on-sale {
+  position: absolute;
+  background: linear-gradient(90deg, #ad0000 0%, #790909 35%, #ff008b 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  bottom: 50px;
+  right: -70px;
+  transform: rotate(-45deg); }
+
 /**
  * ---------------------------------------------------
  * 	5.  Themes
