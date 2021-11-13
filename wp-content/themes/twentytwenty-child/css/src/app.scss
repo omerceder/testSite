@@ -16,6 +16,7 @@
 		1.3 Typography
 		1.4 Helpers
     1.5 Containers
+    1.5 Globals
 	2. Sections
 		2.1 Hero
 		2.2 Footer
@@ -23,6 +24,7 @@
 		3.1 Buttons
 	4. Pages
 		4.1 Products page
+    4.2 Product page
 	5. Themes
 		5.1 Default Theme
 
@@ -44,6 +46,8 @@
 @import 'base/helpers';
 /* --------------------- 1.5 Containers --------------------- */
 @import 'base/containers';
+/* --------------------- 1.5 Globals --------------------- */
+@import 'base/globals';
 
 /**
  * ---------------------------------------------------
@@ -54,14 +58,16 @@
 @import 'layout/hero';
 /* --------------------- 2.2 Footer --------------------- */
 @import 'layout/footer';
+/* --------------------- 2.3 Product Block --------------------- */
+@import 'layout/productBlock';
 
 /**
  * ---------------------------------------------------
  * 	3.  Components
  * ---------------------------------------------------
  */
-/* --------------------- 3.1 Buttons --------------------- */
-// @import 'components/button';
+/* --------------------- 3.1 Slick --------------------- */
+@import 'components/slick';
 
 
 
@@ -70,8 +76,10 @@
  * 	4.  Pages
  * ---------------------------------------------------
  */
-/* --------------------- 4.1 Home page --------------------- */
+/* --------------------- 4.1 Products page --------------------- */
 @import 'pages/products';
+/* --------------------- 4.1 Product page --------------------- */
+@import 'pages/product';
 
 /**
  * ---------------------------------------------------

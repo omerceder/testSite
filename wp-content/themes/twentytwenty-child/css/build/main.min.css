@@ -17,6 +17,7 @@
 		1.3 Typography
 		1.4 Helpers
     1.5 Containers
+    1.5 Globals
 	2. Sections
 		2.1 Hero
 		2.2 Footer
@@ -24,6 +25,7 @@
 		3.1 Buttons
 	4. Pages
 		4.1 Products page
+    4.2 Product page
 	5. Themes
 		5.1 Default Theme
 
@@ -40,6 +42,9 @@
  */
 html {
   box-sizing: border-box; }
+
+body {
+  margin: 0; }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -71,7 +76,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px; }
+  font-size: 16px; }
 
 p {
   color: #444444; }
@@ -80,10 +85,50 @@ a {
   color: #337ab7; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #932a2a;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 700; }
+  font-weight: 700;
+  text-align: center; }
+
+h1 {
+  font-size: 6em;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  @media all and (max-width: 1109px) {
+    h1 {
+      transition: .5s;
+      font-size: 5em; } }
+  @media all and (max-width: 932px) {
+    h1 {
+      transition: .5s;
+      font-size: 4em; } }
+  @media all and (max-width: 754px) {
+    h1 {
+      transition: .5s;
+      font-size: 3.5em; } }
+  @media all and (max-width: 600px) {
+    h1 {
+      transition: .5s;
+      font-size: 2.5em; } }
+
+h2 {
+  font-size: 4em; }
+  @media all and (max-width: 1109px) {
+    h2 {
+      transition: .5s;
+      font-size: 3.5em; } }
+  @media all and (max-width: 932px) {
+    h2 {
+      transition: .5s;
+      font-size: 3em; } }
+  @media all and (max-width: 754px) {
+    h2 {
+      transition: .5s;
+      font-size: 2.5em; } }
+  @media all and (max-width: 600px) {
+    h2 {
+      transition: .5s;
+      font-size: 1.8em; } }
 
 h3 {
   font-size: 1.8em;
@@ -2057,6 +2102,11 @@ ul.linear-list li {
     .container-xl {
       max-width: 1400px; } }
 
+/* --------------------- 1.5 Globals --------------------- */
+main {
+  background: linear-gradient(white, #1b5ea0);
+  background-attachment: fixed; }
+
 /**
  * ---------------------------------------------------
  * 	2.  Sections
@@ -2064,7 +2114,7 @@ ul.linear-list li {
  */
 /* --------------------- 2.1 Hero --------------------- */
 .hero-section {
-  background: linear-gradient(dodgerblue, #0070DF);
+  background: linear-gradient(#1b5ea0, #8bb0d6);
   text-align: center;
   padding: 15px;
   min-height: 20vh;
@@ -2078,30 +2128,6 @@ ul.linear-list li {
   .hero-section .hero-content {
     margin: auto;
     text-transform: uppercase; }
-    .hero-section .hero-content span {
-      background-color: #fff;
-      color: dodgerblue;
-      padding: 0 2px;
-      border-radius: 3px; }
-    .hero-section .hero-content h1 {
-      font-size: 6em;
-      text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
-      @media all and (max-width: 1109px) {
-        .hero-section .hero-content h1 {
-          transition: .5s;
-          font-size: 5em; } }
-      @media all and (max-width: 932px) {
-        .hero-section .hero-content h1 {
-          transition: .5s;
-          font-size: 4em; } }
-      @media all and (max-width: 754px) {
-        .hero-section .hero-content h1 {
-          transition: .5s;
-          font-size: 3.5em; } }
-      @media all and (max-width: 600px) {
-        .hero-section .hero-content h1 {
-          transition: .5s;
-          font-size: 2.5em; } }
     .hero-section .hero-content p {
       font-size: 2em;
       line-height: 2em; }
@@ -2109,6 +2135,12 @@ ul.linear-list li {
         .hero-section .hero-content p {
           transition: .5s;
           font-size: 1.3em; } }
+  .hero-section.product-hero {
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center; }
+    .hero-section.product-hero h1, .hero-section.product-hero p {
+      color: black; }
 
 .page-title {
   padding: 15px 0;
@@ -2145,37 +2177,14 @@ ul.linear-list li {
       width: 95%; } }
 
 /* --------------------- 2.2 Footer --------------------- */
-/**
- * ---------------------------------------------------
- * 	3.  Components
- * ---------------------------------------------------
- */
-/* --------------------- 3.1 Buttons --------------------- */
-/**
- * ---------------------------------------------------
- * 	4.  Pages
- * ---------------------------------------------------
- */
-/* --------------------- 4.1 Home page --------------------- */
-main.main-archive-products .products-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; }
-  @media all and (max-width: 1280px) {
-    main.main-archive-products .products-grid {
-      transition: .5s;
-      grid-template-columns: 1fr 1fr; } }
-  @media all and (max-width: 1080px) {
-    main.main-archive-products .products-grid {
-      transition: .5s;
-      grid-template-columns: 1fr; } }
-
-main.main-archive-products .product-block {
+/* --------------------- 2.3 Product Block --------------------- */
+.product-block {
   display: flex;
   width: 100%;
   height: 500px;
   padding: 2em; }
 
-main.main-archive-products .product-link {
+.product-link {
   position: relative;
   display: flex;
   justify-content: center;
@@ -2187,11 +2196,11 @@ main.main-archive-products .product-link {
   filter: grayscale(0.6);
   overflow: hidden;
   transition: all 0.2s ease; }
-  main.main-archive-products .product-link:hover, main.main-archive-products .product-link:active, main.main-archive-products .product-link:focus {
+  .product-link:hover, .product-link:active, .product-link:focus {
     filter: grayscale(0);
     transform: scale(1.15); }
 
-main.main-archive-products .product-title {
+.product-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2202,7 +2211,7 @@ main.main-archive-products .product-title {
   background: #ffffff59;
   box-shadow: 0 0 10px 15px #ffffff59; }
 
-main.main-archive-products .on-sale {
+.on-sale {
   position: absolute;
   background: linear-gradient(90deg, #ad0000 0%, #790909 35%, #ff008b 100%);
   color: white;
@@ -2214,6 +2223,117 @@ main.main-archive-products .on-sale {
   bottom: 50px;
   right: -70px;
   transform: rotate(-45deg); }
+
+/**
+ * ---------------------------------------------------
+ * 	3.  Components
+ * ---------------------------------------------------
+ */
+/* --------------------- 3.1 Slick --------------------- */
+.slick-arrow {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border-radius: 50%;
+  border: 1px solid black;
+  color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease; }
+  .slick-arrow:hover, .slick-arrow:active, .slick-arrow:focus {
+    transform: scale(1.1); }
+  .slick-arrow:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .slick-arrow.slick-prev {
+    left: -5em; }
+    .slick-arrow.slick-prev:after {
+      background-image: url(../../960c52f1357a17edd2e5.svg); }
+  .slick-arrow.slick-next {
+    right: -5em; }
+    .slick-arrow.slick-next:after {
+      background-image: url(../../bcaf053a02df491d19e6.svg); }
+
+/**
+ * ---------------------------------------------------
+ * 	4.  Pages
+ * ---------------------------------------------------
+ */
+/* --------------------- 4.1 Products page --------------------- */
+main.main-archive-products {
+  background: linear-gradient(white, #1b5ea0);
+  background-attachment: fixed; }
+  main.main-archive-products .products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    @media all and (max-width: 1280px) {
+      main.main-archive-products .products-grid {
+        transition: .5s;
+        grid-template-columns: 1fr 1fr; } }
+    @media all and (max-width: 1080px) {
+      main.main-archive-products .products-grid {
+        transition: .5s;
+        grid-template-columns: 1fr; } }
+
+/* --------------------- 4.1 Product page --------------------- */
+.single-product .product-price-section {
+  padding: 20px 0; }
+
+.single-product .sale-banner h2 {
+  text-align: center;
+  font-size: 80px;
+  color: #ff0f5d; }
+
+@media all and (max-width: 1080px) {
+  .single-product .sale-banner {
+    transition: .5s; }
+    .single-product .sale-banner h2 {
+      font-size: 50px; } }
+
+.single-product .price {
+  text-align: center; }
+  .single-product .price h3 {
+    font-size: 50px; }
+
+.single-product .product-gallery-section {
+  padding: 50px 0;
+  background-color: #bdbdbd80; }
+
+.single-product .related-products-section {
+  padding: 20px 0; }
+
+.single-product .gallery-title {
+  text-align: center; }
+
+.single-product .description-wrapper {
+  margin-top: 40px; }
+
+.single-product .video-wrapper {
+  margin: 40px 0; }
+
+.single-product .gallery-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px; }
+  .single-product .gallery-image img {
+    max-height: 200px; }
+
+.single-product .related-products-wrapper {
+  display: flex;
+  justify-content: space-between; }
 
 /**
  * ---------------------------------------------------

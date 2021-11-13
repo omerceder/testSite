@@ -4,7 +4,7 @@
 
 
 .hero-section{
-    background: linear-gradient(dodgerblue,#0070DF);
+    background: linear-gradient(#1b5ea0, #8bb0d6);
     text-align: center;
     padding: 15px;
 
@@ -19,25 +19,20 @@
     .hero-content{
         margin: auto;
         text-transform: uppercase;
-        span{
-            background-color: #fff;
-            color: dodgerblue;
-            padding: 0 2px;
-            border-radius: 3px;
-        }
-        h1{
-            font-size: 6em;
-            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-            @include media-width(1109){font-size: 5em;}
-            @include media-width(932){font-size: 4em;}
-            @include media-width(754){font-size: 3.5em;}
-            @include media-width(600){font-size: 2.5em;}
-        }
         p{
             font-size: 2em;
             line-height: 2em;
             @include media-width(600){font-size: 1.3em;}
         }
+    }
+
+    &.product-hero {
+      min-height: 50vh;
+      background-size: cover;
+      background-position: center;
+      h1, p {
+        color: black;
+      }
     }
 }
 

@@ -11,7 +11,10 @@ function twentytwenty_child_styles() {
 
     // Register Webpack stylesheet and JS
     wp_enqueue_style( 'site_main_css', get_stylesheet_directory_uri() . '/css/build/main.min.css' );
-    wp_enqueue_script( 'site_main_js', get_stylesheet_directory_uri() . '/js/build/app.min.js' , null , null , true );
+    wp_enqueue_script( 'site_main_js', get_stylesheet_directory_uri() . '/js/build/app.js' , null , null , true );
+
+    // Slick styles:
+    wp_enqueue_style( 'slick_css', get_stylesheet_directory_uri() . '/css/src/slick/slick.css' );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwenty_child_styles');
 
