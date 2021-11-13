@@ -8,13 +8,19 @@ add_action('after_setup_theme', 'remove_admin_bar');
     }
 }
 
-// SHORTCODES
+// SHORTCODE
 
 function print_product_box_shortcode( $atts = array() ) {
-  extract( shortcode_atts( array(
-    'product_id' => '',
-    'box_color' => '',
-  ), $atts ) );
+  extract(
+    shortcode_atts(
+      array(
+        'product_id' => '',
+        'box_color' => '',
+      ),
+      $atts,
+      'print_product'
+    )
+  );
 
   return sprintf( product_box( $product_id, $box_color, $is_shortcode=true) );
 }
