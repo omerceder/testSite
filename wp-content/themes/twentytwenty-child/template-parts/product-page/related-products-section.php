@@ -27,7 +27,7 @@
       <?php
       while($related_query->have_posts()) {
         $related_query->the_post();
-            get_template_part( 'template-parts/layout/product-block' );
+            print_product_box( $post->ID );
         }
         $related_query->wp_reset_query();
       ?>

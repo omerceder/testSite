@@ -1,5 +1,7 @@
 <?php
+  global $wp_query;
   $product_on_sale = get_field('product_on_sale');
+  // show_product_box();
 ?>
 
 <div class="product-block padding-3 center">

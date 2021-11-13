@@ -2179,50 +2179,54 @@ main {
 /* --------------------- 2.2 Footer --------------------- */
 /* --------------------- 2.3 Product Block --------------------- */
 .product-block {
+  position: relative;
   display: flex;
   width: 100%;
   height: 500px;
   padding: 2em; }
-
-.product-link {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.8);
-  filter: grayscale(0.6);
-  overflow: hidden;
-  transition: all 0.2s ease; }
-  .product-link:hover, .product-link:active, .product-link:focus {
-    filter: grayscale(0);
-    transform: scale(1.15); }
-
-.product-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  height: 60%;
-  padding: 20px;
-  min-width: 150px;
-  background: #ffffff59;
-  box-shadow: 0 0 10px 15px #ffffff59; }
-
-.on-sale {
-  position: absolute;
-  background: linear-gradient(90deg, #ad0000 0%, #790909 35%, #ff008b 100%);
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
-  padding: 15px;
-  width: 300px;
-  text-align: center;
-  bottom: 50px;
-  right: -70px;
-  transform: rotate(-45deg); }
+  .product-block .product-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.8);
+    filter: grayscale(0.6);
+    overflow: hidden;
+    transition: all 0.2s ease; }
+    .product-block .product-link:hover, .product-block .product-link:active, .product-block .product-link:focus {
+      filter: grayscale(0);
+      transform: scale(1.15); }
+  .product-block .product-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    padding: 20px;
+    min-width: 150px;
+    background: #ffffff59;
+    box-shadow: 0 0 10px 15px #ffffff59; }
+  .product-block .on-sale {
+    position: absolute;
+    background: linear-gradient(90deg, #ad0000 0%, #790909 35%, #ff008b 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    bottom: 50px;
+    right: -70px;
+    transform: rotate(-45deg); }
+  .product-block .product-price {
+    position: absolute;
+    bottom: 20%; }
+    .product-block .product-price h4 {
+      color: black;
+      font-size: 20px; }
 
 /**
  * ---------------------------------------------------

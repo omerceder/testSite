@@ -16,8 +16,8 @@
                 $products_query = new WP_Query( $args );
 
                 while($products_query->have_posts()) {
-                $products_query->the_post();  
-                    get_template_part( 'template-parts/layout/product-block' );
+                $products_query->the_post();
+                    print_product_box( $post->ID);
                 }
                 $products_query->wp_reset_query();
               ?>
