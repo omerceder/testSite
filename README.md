@@ -66,7 +66,7 @@ From the template directory:
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Omer Ceder - omerceder@gmail.com
+Omer Ceder - omerceder@gmail.com
 
 Project Link: [https://github.com/omerceder/testSite](https://github.com/omerceder/testSite)
 
