@@ -1,0 +1,16 @@
+header.site-header {
+  position: fixed;
+  background: white;
+  width: 100%;
+  background: linear-gradient(180deg, #ffffffe0, transparent);
+
+  .logo-wrapper {
+    padding: 5px;
+  }
+
+  img.shoppy-logo {
+    max-width: 100px;
+    margin: 0;
+  }
+
+}

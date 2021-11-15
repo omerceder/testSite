@@ -5,7 +5,11 @@
   height: 500px;
   padding: 2em;
 
-  .product-link {
+  @include media-width('600') {
+    max-height: 300px;
+  }
+
+  a.product-link {
     position: relative;
     display: flex;
     justify-content: center;
@@ -22,6 +26,7 @@
       filter: grayscale(0);
       transform: scale(1.15);
     }
+
   }
 
   .product-title {
