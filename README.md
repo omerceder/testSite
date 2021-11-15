@@ -50,7 +50,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ### Prerequisites
 
-XAMPP or some other local dev server
+* XAMPP or some other local dev server
+* WordPress enviorment
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
