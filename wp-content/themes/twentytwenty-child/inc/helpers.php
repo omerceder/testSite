@@ -15,16 +15,22 @@ function print_product_box_shortcode( $atts = array() ) {
     shortcode_atts(
       array(
         'product_id' => '',
-        'box_color' => '',
+        'box_color'  => '',
       ),
       $atts,
       'print_product'
     )
   );
 
-  return sprintf( product_box( $product_id, $box_color, $is_shortcode=true) );
+
+  $box_generator = new ProductBoxGenerator($atts);
+
+  return $box_generator->generate($product_id, $box_color);
+
 }
 add_shortcode('print_product', 'print_product_box_shortcode');
+
+
 
 // CUSTOM FUNCTIONS
 
@@ -97,3 +103,6 @@ function get_products_by_category($request) {
 
     return $response;
 }
+//
+// $repository = PostsRepository::init();
+// $product = Product::init();
