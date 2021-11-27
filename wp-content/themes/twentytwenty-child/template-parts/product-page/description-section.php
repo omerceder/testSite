@@ -1,6 +1,8 @@
 <?php
-  $product_description = get_field('product_description');
-  $product_video = get_field('product_video');
+  global $post;
+  $post_id = $post->ID;
+  $product_description = get_post_meta( $post_id, 1, true );
+  $product_video_id = get_post_meta( $post_id, 5, true );
 ?>
 
 <section class="section description-section">
@@ -15,11 +17,12 @@
       </div>
     <?php endif; ?>
 
-    <?php if ( $product_video ): ?>
+    <?php if ( $product_video_id ): ?>
       <div class="video-wrapper">
         <div class="video-title">
           <h2>Check out this video:</h2>
-          <?php print_r($product_video); ?>
+          <iframe width="1440" height="762" src="https://www.youtube-nocookie.com/embed/<?php print_r($product_video_id); ?>"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     <?php endif; ?>

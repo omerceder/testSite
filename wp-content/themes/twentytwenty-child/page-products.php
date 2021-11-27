@@ -17,7 +17,7 @@
 
                 while($products_query->have_posts()) {
                 $products_query->the_post();
-                    print_product_box( $post->ID);
+                    print_product_box( $post->ID );
                 }
                 $products_query->wp_reset_query();
               ?>

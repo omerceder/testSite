@@ -7,8 +7,10 @@
  *  ?
  */
 
- $product_on_sale = isset($product_on_sale) ? : false;
- $product_price = isset($product_price) ? : 0;
+ global $post;
+ $product_on_sale    = get_post_meta( $product_id, 4, true );
+ $product_price      = get_post_meta( $product_id, 2, true );
+ $product_sale_price = get_post_meta( $product_id, 3, true );
 
 ?>
 <div class="product-block padding-3 center" <?php echo $box_color ? 'style="background-color: '.$box_color.'"': ''?>>

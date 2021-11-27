@@ -1,7 +1,9 @@
 <?php
-  $product_on_sale = get_field('product_on_sale');
-  $product_price = get_field('product_price');
-  $product_sale_price = get_field('product_sale_price');
+  global $post;
+  $post_id = $post->ID;
+  $product_on_sale    = get_post_meta( $post_id, 4, true );
+  $product_price      = get_post_meta( $post_id, 2, true );
+  $product_sale_price = get_post_meta( $post_id, 3, true );
 ?>
 
 <section class="section product-price-section">
