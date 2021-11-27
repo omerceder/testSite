@@ -42,7 +42,6 @@ add_action('rest_api_init', function () {
 });
 
 function get_products_by_category($request) {
-
     $args = array (
         'post_type' => 'product',
         'tax_query'     => array(
