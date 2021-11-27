@@ -1,6 +1,6 @@
 <?php
-  $current_product_cat = get_the_terms( $post->ID, 'product_cat' );
-  $current_product_cat_id = $current_product_cat[0]->term_id;
+  $current_product_cat      = get_the_terms( $post->ID, 'product_cat' );
+  $current_product_cat_id   = $current_product_cat[0]->term_id;
   $current_product_cat_name = $current_product_cat[0]->name;
 
   $related_args = array(
@@ -27,7 +27,8 @@
       <?php
       while($related_query->have_posts()) {
         $related_query->the_post();
-            print_product_box( $post->ID );
+          $product_box = new ProductBoxGenerator();
+          print_r($product_box->generate($post->ID));
         }
         $related_query->wp_reset_query();
       ?>

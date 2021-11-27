@@ -1,7 +1,7 @@
 <?php
-  global $wp_query;
-  $product_on_sale = get_field('product_on_sale');
-  // show_product_box();
+    global $post;
+    $post_id = $post->ID;
+    $product_sale_price = get_post_meta( $post_id, 3, true );
 ?>
 
 <div class="product-block padding-3 center">

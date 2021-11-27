@@ -2,7 +2,7 @@
   global $post;
   $post_id = $post->ID;
   $product_description = get_post_meta( $post_id, 1, true );
-  $product_video_id = get_post_meta( $post_id, 5, true );
+  $product_video_id    = get_post_meta( $post_id, 5, true );
 ?>
 
 <section class="section description-section">

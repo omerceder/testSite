@@ -22,12 +22,10 @@ add_action( 'wp_enqueue_scripts', 'twentytwenty_child_styles');
 include_once( get_stylesheet_directory() .'/custom-post-types/product_post_type.php');
 include_once( get_stylesheet_directory() .'/custom-post-types/product_category.php');
 
-
 // Load classes:
-// include_once( get_stylesheet_directory() .'/inc/classes/PostCreator.php');
-// include_once( get_stylesheet_directory() .'/inc/classes/PostsRepository.php');
 include_once( get_stylesheet_directory() .'/inc/Classes/ProductBoxGenerator/ProductBoxGenerator.php');
 include_once( get_stylesheet_directory() .'/inc/Classes/ProductFieldsMetaBox/ProductFieldsMetaBox.php');
+include_once( get_stylesheet_directory() .'/inc/Classes/ProductImageGalleryMetaBox/ProductImageGalleryMetaBox.php');
 
 // Load helpers file (for all custom functions):
 include_once( get_stylesheet_directory() .'/inc/helpers.php');

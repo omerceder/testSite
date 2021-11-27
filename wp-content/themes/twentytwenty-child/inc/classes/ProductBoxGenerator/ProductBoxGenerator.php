@@ -6,11 +6,11 @@ class ProductBoxGenerator
      * Generates the highlighted comment HTML for the given comment.
      *
      * @param int $product_id
-     * @param int $box_color
+     * @param string $box_color
      *
      * @return string
      */
-    public function generate($product_id, $box_color)
+    public function generate($product_id, $box_color = '')
     {
       ob_start();
 
