@@ -23,6 +23,7 @@ include_once( get_stylesheet_directory() .'/custom-post-types/product_post_type.
 include_once( get_stylesheet_directory() .'/custom-post-types/product_category.php');
 
 // Load classes:
+include_once( get_stylesheet_directory() .'/inc/Classes/MetaBoxGenerator/MetaBoxGenerator.php');
 include_once( get_stylesheet_directory() .'/inc/Classes/ProductBoxGenerator/ProductBoxGenerator.php');
 include_once( get_stylesheet_directory() .'/inc/Classes/ProductFieldsMetaBox/ProductFieldsMetaBox.php');
 include_once( get_stylesheet_directory() .'/inc/Classes/ProductImageGalleryMetaBox/ProductImageGalleryMetaBox.php');
