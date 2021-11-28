@@ -29,46 +29,15 @@ function print_product_box_shortcode( $atts = array() ) {
 }
 add_shortcode('print_product', 'print_product_box_shortcode');
 
-// CUSTOM FUNCTIONS
-
-// Rest API Endpoint
-
-// add_action('rest_api_init', function () {
-//   register_rest_route( 'twentytwentyone-child/v1', 'latest-products/(?P<product_cat>\d+)',array(
-//                 'methods'  => 'GET',
-//                 'callback' => 'get_products_by_category'
-//       ));
-// });
-//
-// function get_products_by_category($request) {
-//     $args = array (
-//         'post_type' => 'product',
-//         'tax_query'     => array(
-//             array(
-//                 'taxonomy' => 'product_cat',
-//                 'field'    => 'term_id',
-//                 'terms'    => $request['product_cat'],
-//             ),
-//         ),
-//     );
-//
-//     $posts = get_posts($args);
-//
-//     if (empty($posts)) {
-//       return new WP_Error( 'empty_category', 'There are no posts to display', array('status' => 404) );
-//     }
-//
-//     $response = new WP_REST_Response($posts);
-//     $response->set_status(200);
-//
-//     return $response;
-// }
-
-
-
 /**
- * Create a REST API server.
- *
- */
+* Create a REST API server.
+*
+*/
 
- $rest_server = new Rest_Api_Server( 'twentytwentyone-child/v', '1', 'product', 'product_cat');
+$rest_server = new Rest_Api_Server(
+    'twentytwentyone-child/v', 
+    '1',
+    'product',
+    'product_cat',
+    [1,2,3,4,5,11,12,13,14,15,16]
+);
