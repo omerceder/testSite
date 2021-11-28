@@ -3,6 +3,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
+      <a href="#whats-new">What's New</a>
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
@@ -18,6 +19,15 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
+
+<!-- WHAT'S NEW -->
+## What's News
+
+* Moved most of the functionality to classes.
+* Use of class inheritance (abstract classes).
+* Object instantiation / recycling.
+* Custom meta fields (with classes, as mentioned).
+* ZERO plugins.
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
