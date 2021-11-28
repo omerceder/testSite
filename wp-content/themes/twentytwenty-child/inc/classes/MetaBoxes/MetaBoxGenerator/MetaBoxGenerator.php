@@ -1,16 +1,35 @@
 <?php
 
+/**
+ * Generates Meta Boxes
+ *
+ * @param array $screen
+ *
+ * @param array $meta_fields
+ *
+ * @param string $meta_box_title
+ *
+ * @param string $meta_box_name
+ *
+ * @param string $textdomain
+ *
+ * @param string $context
+ *
+ * @param string $priority
+ *
+ */
+
 // Meta Box Class: MetaBoxGenerator
 // Get the field value: $metavalue = get_post_meta( $post_id, $field_id, true );
 abstract class MetaBoxGenerator{
 	public function __construct( $screen = array(), $meta_fields = array(), $meta_box_title = '', $meta_box_name =  '', $textdomain = 'textdomain', $context = 'normal', $priority = 'default' ) {
-    $this->screen = $screen;
-    $this->meta_fields = $meta_fields;
+    $this->screen         = $screen;
+    $this->meta_fields    = $meta_fields;
     $this->meta_box_title = $meta_box_title;
-    $this->meta_box_name = $meta_box_name;
-    $this->textdomain = $textdomain;
-    $this->context = $context;
-    $this->priority = $priority;
+    $this->meta_box_name  = $meta_box_name;
+    $this->textdomain     = $textdomain;
+    $this->context        = $context;
+    $this->priority       = $priority;
 
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'save_post', array( $this, 'save_fields' ) );

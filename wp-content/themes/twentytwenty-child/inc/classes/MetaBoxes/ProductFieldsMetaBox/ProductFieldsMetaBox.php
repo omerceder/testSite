@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Generates Product Fields Meta Boxe
+ */
+
 // Meta Box Class: ProductFieldsMetaBox
 // Get the field value: $metavalue = get_post_meta( $post_id, $field_id, true );
 class ProductFieldsMetaBox extends MetaBoxGenerator{

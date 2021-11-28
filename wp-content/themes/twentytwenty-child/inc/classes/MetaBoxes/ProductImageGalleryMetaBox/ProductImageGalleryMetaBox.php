@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Generates Product Gallery Meta Boxe
+ */
+
 // Meta Box Class: ProductImageGalleryMetaBox
 // Get the field value: $metavalue = get_post_meta( $post_id, $field_id, true );
 class ProductImageGalleryMetaBox extends MetaBoxGenerator{

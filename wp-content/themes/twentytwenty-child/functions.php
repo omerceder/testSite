@@ -23,10 +23,17 @@ include_once( get_stylesheet_directory() .'/custom-post-types/product_post_type.
 include_once( get_stylesheet_directory() .'/custom-post-types/product_category.php');
 
 // Load classes:
-include_once( get_stylesheet_directory() .'/inc/Classes/MetaBoxGenerator/MetaBoxGenerator.php');
+
+/* REST_API */
+include_once( get_stylesheet_directory() .'/inc/Classes/RestApi/Rest_Api_Server.php');
+
+/* Product Box Generator */
 include_once( get_stylesheet_directory() .'/inc/Classes/ProductBoxGenerator/ProductBoxGenerator.php');
-include_once( get_stylesheet_directory() .'/inc/Classes/ProductFieldsMetaBox/ProductFieldsMetaBox.php');
-include_once( get_stylesheet_directory() .'/inc/Classes/ProductImageGalleryMetaBox/ProductImageGalleryMetaBox.php');
+
+/* Product Meta Boxes */
+include_once( get_stylesheet_directory() .'/inc/Classes/MetaBoxes/MetaBoxGenerator/MetaBoxGenerator.php'); // Meta Box Generator Class (Abstract Parent)
+include_once( get_stylesheet_directory() .'/inc/Classes/MetaBoxes/ProductFieldsMetaBox/ProductFieldsMetaBox.php'); // Product Fields Generator Class (Child)
+include_once( get_stylesheet_directory() .'/inc/Classes/MetaBoxes/ProductImageGalleryMetaBox/ProductImageGalleryMetaBox.php'); // Product Gallery Class (Child)
 
 // Load helpers file (for all custom functions):
 include_once( get_stylesheet_directory() .'/inc/helpers.php');
