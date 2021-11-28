@@ -43,6 +43,8 @@ class Rest_Api_Server extends WP_REST_Controller {
     }
 
     public function register_meta_fields( $post_data, $meta_keys ) {
+        // Can't get this to work properly...
+
         foreach ( $meta_keys as $key ) {
             register_rest_field( $this->post_type, $key, array(
                     'get_callback' => function ( $post_data, $key ) {
