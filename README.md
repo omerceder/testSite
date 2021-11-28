@@ -3,9 +3,9 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#whats-new">What's New</a>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#whats-new">What's New</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -20,15 +20,6 @@
   </ol>
 </details>
 
-<!-- WHAT'S NEW -->
-## What's News
-
-* Moved most of the functionality to classes.
-* Use of class inheritance (abstract classes).
-* Object instantiation / recycling.
-* Custom meta fields (with classes, as mentioned).
-* ZERO plugins.
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -41,6 +32,16 @@ Includes:
 * Products Archive Page
 * Products Single Page
 * Custom Shortcode Demo
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### What's New
+
+* Moved most of the functionality to classes.
+* Use of class inheritance (abstract classes).
+* Object instantiation / recycling.
+* Custom meta fields (with classes, as mentioned).
+* ZERO plugins.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
